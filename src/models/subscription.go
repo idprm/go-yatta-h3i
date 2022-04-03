@@ -14,5 +14,6 @@ type Subscription struct {
 	SubKeyword string `gorm:"50" json:"sub_keyword"`
 	IsActive   bool   `gorm:"type:bool" json:"is_active"`
 	RenewalAt  *time.Time
+	PurgeAt    *time.Time
 	gorm.Model
 }

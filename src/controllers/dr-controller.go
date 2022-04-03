@@ -1,10 +1,11 @@
 package controllers
 
 import (
-	"io"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
-func DeliveryReport(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "version 1")
+func DeliveryReport(c *gin.Context) {
+	c.XML(http.StatusOK, gin.H{"status": "OK"})
 }
